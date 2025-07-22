@@ -11,51 +11,42 @@
             max-width: 1140px;
             margin: 0 auto;
         }
-
         .design {
             border: 2px solid blue;
-            /* width: 50%; */
             height: 150px;
         }
-
         .container {
-            display: flex;
-            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /* width: 100%; */
         }
-
-        /* .container div{
-        width: 50%;
-    } */
         .inner-box {
             display: flex;
         }
 
         .box1 {
             height: 504px;
-            width: 590px;
+            width: 594px;
             background-color: aquamarine;
         }
-
         .box2 {
             height: 250px;
             width: 594px;
             background-color: blueviolet;
         }
-
         .box3 {
             height: 250px;
             width: 295px;
             background-color: cadetblue;
         }
-
-        /* .box{
-       display: grid;
-       grid-template-columns: repeat(2,1fr);
-
-    } */
+        @media screen and (max-width:576px){
+            .container {
+            grid-template-columns: repeat(1,1fr);
+            /* width: 100%; */
+        }
+        }
     </style>
 </head>
-
 <body>
     <section class="container">
         <div class="box1 design">box1</div>
@@ -65,11 +56,7 @@
                 <div class="box3 design">box1</div>
                 <div class="box3 design">box1</div>
             </div>
-
         </div>
-
-
     </section>
 </body>
-
 </html>
